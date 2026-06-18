@@ -25,7 +25,7 @@ Audience passes by  →  PIR detects motion  →  sustained for 5 s (false-trigg
                     →  playback ends / times out  →  COOLDOWN  →  back to IDLE
 ```
 
-- **LIST1**: 6 short tracks, played sequentially in a loop (`1.mp3` → `6.mp3`). Between each track has a 30-seconds COOLDOWN period.
+- **LIST1**: 5 short tracks, played sequentially in a loop (`1.mp3` → `5.mp3`). Between each track has a 30-seconds COOLDOWN period.
 - **LIST2**: 1 long track.
 - Playback alternates between the two lists: LIST1 completes a full cycle or time out during COOLDOWN → switch to LIST2 → switch back to LIST1
 
@@ -51,7 +51,7 @@ Audience passes by  →  PIR detects motion  →  sustained for 5 s (false-trigg
 2. Audio transcoding: use **ffmpeg** to convert to **stereo MP3, 320kbps**. WAV is playable but unreliable on the VS1053 (fragile parsing).
 3. File structure:
    ```
-   /LIST1/1.mp3  ...  /LIST1/6.mp3
+   /LIST1/1.mp3  ...  /LIST1/5.mp3
    /LIST2/1.mp3
    ```
    Both LIST files can be added up to 99. **The numbering must follow a sequential order**.
